@@ -4,7 +4,7 @@ A Chinese identity card generator.
 
 ![screenshot](screenshot.png)
 
-Requires Python 3.11+ and [uv](https://docs.astral.sh/uv/).
+Requires Python 3.14+ and [uv](https://docs.astral.sh/uv/).
 
 ## Usage
 
