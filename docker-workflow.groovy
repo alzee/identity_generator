@@ -17,7 +17,7 @@ node {
         stage 'Test Image'
         // Run testcase
         img.inside() {
-            sh 'python test.py'
+            sh 'uv run --group dev python src/test.py'
         }
     }
 }

@@ -1,14 +1,18 @@
 # IdentityCard
 
-A chinese identity card generator.
+A Chinese identity card generator.
 
 ![screenshot](screenshot.png)
 
-
+Requires Python 3.11+ and [uv](https://docs.astral.sh/uv/).
 
 ## Usage
 
 ### Command
+
+```
+uv run python src/IdentityCard.py --num 1
+```
 
 ```
 Usage: IdentityCard.py [options] arg1 arg2
@@ -24,32 +28,44 @@ Options:
   --day=DAY      Birth day [default: 0]
 ```
 
+### Web server
 
+```
+uv run python src/web.py
+```
+
+### Tests
+
+Start the web server first, then:
+
+```
+uv run --group dev python src/test.py
+```
 
 ### API
 
-http://identity.daoapp.io/api
+http://127.0.0.1:5000/api
 
-http://identity.daoapp.io/api?num=2
+http://127.0.0.1:5000/api?num=2
 
-http://identity.daoapp.io/api?num=5&min=20
+http://127.0.0.1:5000/api?num=5&min=20
 
-http://identity.daoapp.io/api?num=10&min=20&max=40
+http://127.0.0.1:5000/api?num=10&min=20&max=40
 
-http://identity.daoapp.io/api?num=10&min=20&max=40&sex=1
+http://127.0.0.1:5000/api?num=10&min=20&max=40&sex=1
 
-http://identity.daoapp.io/api?num=3&min=20&max=40&sex=1&year=1988&month=4&day=20
+http://127.0.0.1:5000/api?num=3&min=20&max=40&sex=1&year=1988&month=4&day=20
 
 
 
 ### WEB
 
-http://identity.daoapp.io/?num=2
+http://127.0.0.1:5000/?num=2
 
-http://identity.daoapp.io/?num=5&min=20
+http://127.0.0.1:5000/?num=5&min=20
 
-http://identity.daoapp.io/?num=10&min=20&max=40
+http://127.0.0.1:5000/?num=10&min=20&max=40
 
-http://identity.daoapp.io/?num=10&min=20&max=40&sex=1
+http://127.0.0.1:5000/?num=10&min=20&max=40&sex=1
 
-http://identity.daoapp.io/?num=3&min=20&max=40&sex=1&year=1988&month=4&day=20
+http://127.0.0.1:5000/?num=3&min=20&max=40&sex=1&year=1988&month=4&day=20
